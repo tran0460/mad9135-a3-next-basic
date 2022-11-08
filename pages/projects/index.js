@@ -1,18 +1,13 @@
-import Link from "next/link";
+import { Container } from "@mui/material";
+import ActionAreaCard from "../../components/ActionAreaCard";
+
 export default function Projects({ projects }) {
   return (
-    <div>
+    <Container>
       {projects.map((project) => {
-        return (
-          <div key={project.id}>
-            <p>{project.title}</p>
-            <p>{project.body}</p>
-            <Link href={`/projects/${project.id}`}>See more</Link>
-            <p>***********</p>
-          </div>
-        );
+        return <ActionAreaCard data={project} />;
       })}
-    </div>
+    </Container>
   );
 }
 
