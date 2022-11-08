@@ -1,11 +1,20 @@
 import "../styles/globals.css";
 import Layout from "../components/Layout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AppContext } from "../Context/AppContext";
 
 function MyApp({ Component, pageProps }) {
   const [teamList, setTeamList] = useState([]);
-  const contextValue = [teamList, setTeamList];
+  const contextValue = { teamList, setTeamList };
+
+  const handleFetch = async () => {
+    const resp = await fetch("./api/TeamData");
+    const data = await resp.json();
+  };
+
+  useEffect(() => {
+    handleFetch();
+  }, []);
   return (
     <AppContext.Provider value={contextValue}>
       <Layout>
