@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }) {
   const handleFetch = async () => {
     const resp = await fetch("./api/TeamData");
     const data = await resp.json();
+    setTeamList(data);
   };
 
   useEffect(() => {
