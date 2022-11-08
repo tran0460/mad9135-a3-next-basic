@@ -1,6 +1,6 @@
 export const data = [
   {
-    id: Date.now(),
+    id: Math.random() * 1000000,
     fullName: "Antonio Pugh",
     age: 29,
     role: "Human Team Engineer",
@@ -8,7 +8,7 @@ export const data = [
     imageSrc: "/images/antonio.jpg",
   },
   {
-    id: Date.now(),
+    id: Math.random() * 1000000,
     fullName: "Stacie Eaton",
     age: 19,
     role: "Global Identity Director",
@@ -16,7 +16,7 @@ export const data = [
     imageSrc: "/images/stacie.jpg",
   },
   {
-    id: Date.now(),
+    id: Math.random() * 1000000,
     fullName: "Aayush Wormald",
     age: 35,
     role: "Global Communications Engineer",
@@ -24,7 +24,7 @@ export const data = [
     imageSrc: "/images/aayush.jpg",
   },
   {
-    id: Date.now(),
+    id: Math.random() * 1000000,
     fullName: "Jimmie Andrews",
     age: 47,
     role: "Regional Configuration Planner",
