@@ -1,6 +1,11 @@
+import { useRouter } from "next/router";
+
 export default function Details({ project }) {
+  const imgUrl = useRouter().query.randImg;
+
   return (
     <div>
+      <img src={imgUrl} alt="image" />
       <p>{project.title}</p>
       <p>{project.body}</p>
     </div>
