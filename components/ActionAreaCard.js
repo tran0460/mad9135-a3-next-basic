@@ -12,9 +12,10 @@ export default function ActionAreaCard({ data }) {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
+          image={`https://picsum.photos/id/${(Math.random() * 100).toFixed(
+            0
+          )}/300/200`}
+          alt="image"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

@@ -3,7 +3,16 @@ import ActionAreaCard from "../../components/ActionAreaCard";
 
 export default function Projects({ projects }) {
   return (
-    <Container>
+    <Container
+      maxWidth="lg"
+      sx={{
+        display: "flex",
+        flexDirection: { sx: "column", md: "row" },
+        flexWrap: "wrap",
+        alignItems: "stretch",
+        gap: "2rem",
+        padding: "2rem",
+      }}>
       {projects.map((project) => {
         return <ActionAreaCard data={project} />;
       })}
