@@ -15,7 +15,7 @@ export default function Projects({ projects }) {
         padding: "2rem",
       }}>
       {projects.map((project) => {
-        return <ActionAreaCard data={project} />;
+        return <ActionAreaCard data={project} type={"project"} />;
       })}
     </Container>
   );
