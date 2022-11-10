@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import Image from "next/image";
 import { Container, Typography } from "@mui/material";
 
 export default function Details({ project }) {
@@ -16,7 +15,7 @@ export default function Details({ project }) {
         gap: "1rem",
         padding: "2rem",
       }}>
-      <Image src={imgUrl} alt="image" style={{ width: "50%" }} />
+      <img src={imgUrl} alt="image" style={{ width: "50%" }} />
       <Container
         sx={{
           display: "flex",
