@@ -1,14 +1,34 @@
 import { useRouter } from "next/router";
+import { Container, Typography } from "@mui/material";
 
 export default function Details({ project }) {
   const imgUrl = useRouter().query.randImg;
 
   return (
-    <div>
-      <img src={imgUrl} alt="image" />
-      <p>{project.title}</p>
-      <p>{project.body}</p>
-    </div>
+    <Container
+      maxWidth="lg"
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "1rem",
+        padding: "2rem",
+      }}>
+      <img src={imgUrl} alt="image" style={{ width: "50%" }} />
+      <Container
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "1rem",
+          padding: "2rem",
+        }}>
+        <Typography variant="h5">{project.title}</Typography>
+        <Typography variant="h5">{project.body}</Typography>
+      </Container>
+    </Container>
   );
 }
 
