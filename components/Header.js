@@ -103,7 +103,9 @@ export default function Header() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link href={page === "Home" ? "/" : `/${page.toLowerCase()}`}>
+              <Link
+                key={page}
+                href={page === "Home" ? "/" : `/${page.toLowerCase()}`}>
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}

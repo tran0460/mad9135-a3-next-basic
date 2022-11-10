@@ -24,7 +24,7 @@ export default function Home() {
         <div className={styles.grid}>
           <Link href="/team" className={styles.card}>
             <h2>About us &rarr;</h2>
-            <p>Have a look at who we are and why we're here.</p>
+            <p>Have a look at who we are and why we&apos;re here.</p>
           </Link>
 
           <Link href="/projects" className={styles.card}>
